@@ -1,0 +1,179 @@
+/* You can not modify anything in the HTML */
+/* You can only modify the CSS file */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: small;
+}
+
+body {
+    background-color: #fff;
+    font-family: "Poppins", sans-serif;
+}
+
+li{
+    list-style: none;
+    font-size: small;
+}
+
+p{
+    font-size: small;
+}
+
+button{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(186, 12, 197);
+    border-radius: 10px;
+    color: #ffffff;
+    white-space: nowrap;
+    padding: 14px 30px;
+}
+
+button:hover{
+    opacity: 90%;
+}
+
+/* util  */
+
+.button-small{
+    font-size: medium;
+    font-weight: bold;
+}
+
+.button-large{
+    font-size: x-large;
+    font-weight: 500;
+    margin-top: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 1px 2px 7px;
+}
+
+/* container  */
+
+.container{
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+}
+
+
+/* navbar  */
+
+section[aria-label="navbar"]{
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 4rem;
+
+}
+
+.line{
+    display: inline-block;
+    width: 0.2rem;
+    height: 40px;
+    background-color: #ffffff;
+}
+
+.grow-list{
+    flex-basis: 80%;
+}
+
+.logo{
+    width: 90px;
+}
+
+.grow-list .list{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 4rem;
+}
+
+.grow-list .list li{
+    position: relative;
+    cursor: pointer;  
+    transition: color 0.3s ease-in-out;
+}
+
+
+.grow-list .list li:hover{
+    color: #ba0cc5;
+}
+
+/* hero  */
+
+
+
+section[aria-label="hero"] {
+    width: 100%;
+    height: 100%;
+    min-height: calc(100vh - 76px);
+    background: url('./assets/bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    padding-top: 5rem;
+    padding-inline: 2rem;
+}
+
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    text-align: center;
+}
+
+.hero-heading{
+    font-size: xxx-large;
+    font-weight: 680;
+    max-width: 900px;
+    margin-inline: auto;
+    padding: 2rem;
+    line-height: 1.5;
+    font-family: "Montserrat";
+}
+
+.hero-description{
+    font-weight: 600;
+    font-size: medium;
+}
+
+@media (max-width:1000px){
+    .grow-list{
+        display: none;
+    }
+
+    .line{
+        display: none;
+    }
+
+    .hero-heading{
+        font-size: large;
+    }
+
+    .hero-description,.button-large{
+        font-size: small;
+    }
+}
+
+@media (max-width:600px) {
+    .navbar{
+        padding: 1.5rem 2rem;
+    }
+}
